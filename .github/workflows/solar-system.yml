@@ -50,8 +50,9 @@ jobs:
     
         - name: Install NodeJS dependencies
           run: npm install
-        - run: npm run coverage
-          continue-on-error: true
+
+        - continue-on-error: true
+          run: npm run coverage
         - name: Upload code-coverage reports
           uses: actions/upload-artifact@v4
           with:
